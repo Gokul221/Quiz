@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Javascript Quiz</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+
+	<div style="width: 90%; margin: 0 auto;">
+
+		<!-- preload images -->
+		<div style="display: none;">
+			<img src="images/yellow box.gif">
+			<img src="images/b&w box.gif">
+		</div>
+
+		<!-- Start header div -->
+		<div style="text-align: center;">
+			<h1 class="display-1">The Javascript Quiz</h1>
+			<img src="images/yellow box.gif" id="headerImage">
+			<h2 id="message">Test your Javascript knowledge</h2>
+			<button type="button" class="btn btn-primary btn-lg" id="startbtn" onclick="start()">Start</button>
+		</div>
+
+		<!-- Question 1 div -->
+		<div class="form-check, question" id="question0">
+			<h3>Q1. Javascript is a ________ language.</h3>
+			<form>
+				<table cellpadding="20" align="center">
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Programming" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">Programming</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Scripting" id="flexRadioDefault2">
+							<label class="form-check-label" for="flexRadioDefault2">Scripting</label>
+						</td>
+					</tr>
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Application" id="flexRadioDefault3">
+							<label class="form-check-label" for="flexRadioDefault3">Application</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Compilation" id="flexRadioDefault4">
+							<label class="form-check-label" for="flexRadioDefault4">Compilation</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center" class="ansDiv" id="ansBlock0">Correct Answer!</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="button" value="Submit" class="submit, btn" id=0 onclick="check(this.id)">
+						</td>
+					</tr>
+				</table>
+				<button type="button" value="Submit" name="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+
+
+
+		<!-- Question 2 div -->
+		<div class="form-check, question" id="question1">
+			<h3>Q2. Javascript is a ________ side scripting language.</h3>
+			<form>
+				<table cellpadding="20" align="center">
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="ISP" id="flexRadioDefault5">
+							<label class="form-check-label" for="flexRadioDefault5">ISP</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Client" id="flexRadioDefault6">
+							<label class="form-check-label" for="flexRadioDefault6">Client</label>
+						</td>
+					</tr>
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Server" id="flexRadioDefault7">
+							<label class="form-check-label" for="flexRadioDefault7">Server</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="none" id="flexRadioDefault8">
+							<label class="form-check-label" for="flexRadioDefault8">None of the above</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center" class="ansDiv" id="ansBlock1">Correct Answer!</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="button" value="Submit" class="submit, btn" id=1 onclick="check(this.id)">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+
+
+		<!-- Question 3 div -->
+		<div class="form-check, question" id="question2">
+			<h3>Q3. Javascript file extension is ________ .</h3>
+			<form>
+				<table cellpadding="20" align="center">
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="js" id="flexRadioDefault9">
+							<label class="form-check-label" for="flexRadioDefault9">.js</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="jvs" id="flexRadioDefault10">
+							<label class="form-check-label" for="flexRadioDefault10">.jvs</label>
+						</td>
+					</tr>
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="javascript" id="flexRadioDefault11">
+							<label class="form-check-label" for="flexRadioDefault11">.javascript</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="jsc" id="flexRadioDefault12">
+							<label class="form-check-label" for="flexRadioDefault12">.jsc</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center" class="ansDiv" id="ansBlock2">Correct Answer!</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="button" value="Submit" class="submit, btn" id=2 onclick="check(this.id)">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+
+		<!-- Question 4 div -->
+		<div class="form-check, question" id="question3">
+			<h3>Q4. Javascript was invented by whom?</h3>
+			<form>
+				<table cellpadding="20" align="center">
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Guido" id="flexRadioDefault13">
+							<label class="form-check-label" for="flexRadioDefault13">Guido Van Rossum</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Dennis" id="flexRadioDefault14">
+							<label class="form-check-label" for="flexRadioDefault14">Dennis Ritchie</label>
+						</td>
+					</tr>
+					<tr align="left">
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Bjarne" id="flexRadioDefault15">
+							<label class="form-check-label" for="flexRadioDefaul15">Bjarne Stroustrup</label>
+						</td>
+						<td>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" value="Brendan" id="flexRadioDefault16">
+							<label class="form-check-label" for="flexRadioDefault16">Brendan Eich</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center" class="ansDiv" id="ansBlock3">Correct Answer!</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="button" value="Submit" class="submit, btn" id=3 onclick="check(this.id)">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
