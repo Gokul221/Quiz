@@ -6,7 +6,7 @@ var userAnswers = [];
 var quesNumber;
 
 function start(argument) {
-	document.getElementById("message").style.display = "none";
+	// document.getElementById("message").style.display = "none";
 	document.getElementById("startbtn").style.display = "none";
 	document.getElementById("headerImage").src = "images/b&w box.gif";
 	document.getElementById("question0").style.display = "block";
@@ -25,7 +25,7 @@ function check(btnId) {
 	if(userAnswers[btnId] == correctAnswers[btnId]) {
 		document.getElementById("headerImage").src = "images/yellow box.gif";
 		document.getElementById(ansBlock).style.visibility = "visible";
-		document.getElementById(ansBlock).innerHTML = "Correct Answer!";
+		document.getElementById(ansBlock).innerHTML = "You scored +1 point!";
 		swal({
 
   			title: "Good job!",
@@ -40,7 +40,7 @@ function check(btnId) {
 
 	else{
 		document.getElementById(ansBlock).style.visibility = "visible";
-		document.getElementById(ansBlock).innerHTML = "Wrong Answer!";
+		document.getElementById(ansBlock).innerHTML = "You got -1 point";
 		swal({
 
   			title: "Nope",

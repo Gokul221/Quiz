@@ -13,17 +13,16 @@ body {
 	cursor: pointer;
 }
 
-h1 {
-	color: #966a10;
-	font-weight: bold;
-	font-family: "Calibri";
+.display-1 {
+	background-color: #f0db4f;
+	color: #323330;
+	font-family: "Century Gothic";
 }
 
 h2 {
 	margin: 10px auto;
 	width: 40%;
-	color: #fff;
-	background-color: #218721;
+	color: #000;
 	font-family: "sans-serif;";
 	padding: 10px;
 }
